@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: tejaskrit-vera-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn bot:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: TEAM_NAME
+        value: Tejaskrit
+      - key: CONTACT_EMAIL
+        value: dixitkrishna7777@gmail.com
+      - key: USE_GEMINI_POLISH
+        value: false
